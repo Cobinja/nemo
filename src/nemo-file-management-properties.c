@@ -91,6 +91,7 @@
 #define NEMO_FILE_MANAGEMENT_PROPERTIES_IGNORE_VIEW_METADATA_WIDGET "ignore_view_metadata_checkbutton"
 #define NEMO_FILE_MANAGEMENT_PROPERTIES_BOOKMARKS_IN_TO_MENUS_WIDGET "bookmarks_in_to_checkbutton"
 #define NEMO_FILE_MANAGEMENT_PROPERTIES_PLACES_IN_TO_MENUS_WIDGET "places_in_to_checkbutton"
+#define NEMO_FILE_MANAGEMENT_PROPERTIES_INHERIT_SHOW_THUMBNAILS_WIDGET "inherit_show_thumbnails_checkbutton"
 
 #define NEMO_FILE_MANAGEMENT_PROPERTIES_BULK_RENAME_WIDGET "bulk_rename_entry"
 
@@ -152,7 +153,6 @@ static const char * const date_format_values[] = {
 static const char * const preview_image_values[] = {
     "always",
     "local-only",
-    "per-folder",
     "never",
     NULL
 };
@@ -907,6 +907,9 @@ nemo_file_management_properties_dialog_setup (GtkBuilder  *builder,
 			   NEMO_FILE_MANAGEMENT_PROPERTIES_PREVIEW_IMAGE_WIDGET,
 			   NEMO_PREFERENCES_SHOW_IMAGE_FILE_THUMBNAILS,
 			   (const char **) preview_image_values);
+    bind_builder_bool (builder, nemo_preferences,
+               NEMO_FILE_MANAGEMENT_PROPERTIES_INHERIT_SHOW_THUMBNAILS_WIDGET,
+               NEMO_PREFERENCES_INHERIT_SHOW_THUMBNAILS);
 	bind_builder_enum (builder, nemo_preferences,
 			   NEMO_FILE_MANAGEMENT_PROPERTIES_PREVIEW_FOLDER_WIDGET,
 			   NEMO_PREFERENCES_SHOW_DIRECTORY_ITEM_COUNTS,

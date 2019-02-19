@@ -3,7 +3,6 @@
     <value nick="always" value="0"/>
     <value nick="local-only" value="1"/>
     <value nick="never" value="2"/>
-    <value nick="per-folder" value="3"/>
   </enum>
 
   <enum id="org.nemo.ClickPolicy">
@@ -222,6 +221,11 @@
       <default>'local-only'</default>
       <summary>When to show thumbnails of image files</summary>
       <description>Speed tradeoff for when to show an image file as a thumbnail. If set to "always" then always thumbnail,  even if the folder is on a remote server. If set to "local-only" then only show thumbnails for local file systems. If set to "never" then never bother to thumbnail images, just use a generic icon.</description>
+    </key>
+    <key name="inherit-show-thumbnails" type="b">
+      <default>false</default>
+      <summary>Inherit thumbnail visibility from parent</summary>
+      <description>If set, folders will inherit their thumbnail visibility from their parents</description>
     </key>
     <key name="thumbnail-limit" type="t">
       <default>1048576</default>

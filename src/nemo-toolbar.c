@@ -186,9 +186,7 @@ toolbar_update_appearance (NemoToolbar *self)
     else {gtk_widget_show (GTK_WIDGET(widgetitem));}
     
     widgetitem = self->priv->show_thumbnails_button;
-    icon_toolbar = g_settings_get_boolean (nemo_preferences, NEMO_PREFERENCES_SHOW_SHOW_THUMBNAILS_TOOLBAR) &&
-                   (g_settings_get_enum (nemo_preferences, NEMO_PREFERENCES_SHOW_IMAGE_FILE_THUMBNAILS) ==
-                    NEMO_SPEED_TRADEOFF_PER_FOLDER);
+    icon_toolbar = g_settings_get_boolean (nemo_preferences, NEMO_PREFERENCES_SHOW_SHOW_THUMBNAILS_TOOLBAR);
     if ( icon_toolbar == FALSE ) { gtk_widget_hide (widgetitem); }
     else {gtk_widget_show (GTK_WIDGET(widgetitem));}
 

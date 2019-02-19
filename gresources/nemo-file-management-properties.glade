@@ -314,16 +314,13 @@
     </columns>
     <data>
       <row>
-        <col id="0" translatable="yes">Always</col>
+        <col id="0" translatable="yes">Yes</col>
       </row>
       <row>
         <col id="0" translatable="yes">Local Files Only</col>
       </row>
       <row>
-        <col id="0" translatable="yes">Per Folder</col>
-      </row>
-      <row>
-        <col id="0" translatable="yes">Never</col>
+        <col id="0" translatable="yes">No</col>
       </row>
     </data>
   </object>
@@ -2245,6 +2242,22 @@
                                           </packing>
                                         </child>
                                         <child>
+                                          <object class="GtkCheckButton" id="inherit_show_thumbnails_checkbutton">
+                                            <property name="label" translatable="yes">_Inherit thumbnail visibility from parent</property>
+                                            <property name="visible">True</property>
+                                            <property name="can_focus">True</property>
+                                            <property name="receives_default">False</property>
+                                            <property name="use_underline">True</property>
+                                            <property name="xalign">0</property>
+                                            <property name="draw_indicator">True</property>
+                                          </object>
+                                          <packing>
+                                            <property name="expand">False</property>
+                                            <property name="fill">False</property>
+                                            <property name="position">1</property>
+                                          </packing>
+                                        </child>
+                                        <child>
                                           <object class="GtkBox" id="hbox21">
                                             <property name="visible">True</property>
                                             <property name="can_focus">False</property>
@@ -2286,7 +2299,7 @@
                                           <packing>
                                             <property name="expand">False</property>
                                             <property name="fill">True</property>
-                                            <property name="position">1</property>
+                                            <property name="position">2</property>
                                           </packing>
                                         </child>
                                       </object>
